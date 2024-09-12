@@ -1,0 +1,36 @@
+{{-- resources/views/dashboard.blade.php --}}
+
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('User Dashboard') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                    <h3>Welcome, {{ Auth::user()->name }}!</h3>
+                    <p>This is your user dashboard.</p>
+                    
+                    <!-- Display Products -->
+                    <div class="row mt-4 g-3">
+                        @foreach($products as $product)
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $product->title }}</h5>
+                                        <p class="card-text">Category: {{ $product->category }}</p>
+                                        <p class="card-text">Price: Rs.{{ $product->price }}.00</p>
+                                        <a href="#" class="btn btn-primary">View Product</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>
