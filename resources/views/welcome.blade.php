@@ -25,21 +25,21 @@
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <header class="w-full lg:flex lg:items-center lg:justify-between">
             <div class="flex lg:justify-center lg:col-start-2">
-                <img src="{{ asset('logo/logo01.png')}}" width="100px" height="150px" class="rounded-full shadow-lg border-2 border-gray-300">
+                <img src="{{ asset('logo/logo01.png')}}" width="100px" height="150px" class="rounded-full border-0 border-gray-300">
             </div>
             @if (Route::has('login'))
                 <nav class="ml-auto flex items-center space-x-4">
                     @auth
                         <a
                             href="{{ url('/dashboard') }}"
-                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-3 py-3 px-6 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
                         >
                             Dashboard
                         </a>
                     @else
                         <a
                             href="{{ route('login') }}"
-                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-3 py-3 px-6 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
                         >
                             Log in
                         </a>
@@ -47,7 +47,7 @@
                         @if (Route::has('register'))
                             <a
                                 href="{{ route('register') }}"
-                                class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-3 py-3 px-6 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
                             >
                                 Register
                             </a>
@@ -57,7 +57,7 @@
             @endif
         </header>
       </div>
-      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+      {{-- <hr class="border-b border-gray-100 opacity-25 my-0 py-0" /> --}}
     </nav>
     <!--Hero-->
     <div class="pt-24">
@@ -78,7 +78,7 @@
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
-          <img class="w-full md:w-4/5 z-50" src="{{ asset('build\assets/hero.png') }}" />
+          <img class="w-full md:w-3/5 z-50" src="{{ asset('build\assets/hero.png') }}" />
         </div>
       </div>
     </div>
