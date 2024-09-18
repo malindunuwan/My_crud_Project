@@ -12,7 +12,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h3>Welcome, {{ Auth::user()->name }}!</h3>
-                    <p>This is your user dashboard.</p>
+                    <p>This is your dashboard.</p>
                     
                     <!-- Display Products -->
                     <div class="row mt-4 g-3">
